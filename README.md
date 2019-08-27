@@ -9,7 +9,7 @@ New issues and pull requests to improve for general community highly encouraged.
 #### windowing
 
 | Binding   | Description               |
-| :-:       | :--                       |
+| --:       | :--                       |
 | `SPC w /` | split window vertically   |
 | `SPC w -` | split window horizontally |
 | `SPC 1`   | switch to window 1        |
@@ -21,7 +21,7 @@ New issues and pull requests to improve for general community highly encouraged.
 
 
 | Binding     | Description                             |
-| :-:         | :--                                     |
+| --:         | :--                                     |
 | `SPC b b`   | switch buffers                          |
 | `SPC f f`   | find a file                             |
 | `SPC f s`   | save a file (:w also works)             |
@@ -60,7 +60,7 @@ New issues and pull requests to improve for general community highly encouraged.
 #### region/highlighting
 
 | Binding | Description          |
-| :-:     | :--                  |
+| --:     | :--                  |
 | `SPC v` | expand region        |
 | `SPC V` | contract region      |
 | `v`     | set visual char mode |
@@ -71,7 +71,7 @@ New issues and pull requests to improve for general community highly encouraged.
 #### unimpaired
 
 | Binding  | Description              |
-| :-:      | :--                      |
+| --:      | :--                      |
 | `[e`     | Move line up             |
 | `]e`     | Move line down           |
 | `[SPACE` | Insert space above       |
