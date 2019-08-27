@@ -68,10 +68,10 @@ New issues and pull requests to improve for general community highly encouraged.
 | `C-v`       | block visual mode          |
 | `s (`       | put parens around a region |
 
-#### unimpaired
+#### Unimpaired
 
 | Binding  | Description              |
-| --:      | :--                      |
+| :--      | :--                      |
 | `[e`     | Move line up             |
 | `]e`     | Move line down           |
 | `[SPACE` | Insert space above       |
@@ -82,7 +82,7 @@ New issues and pull requests to improve for general community highly encouraged.
 ## evil-mc
 
 | Binding | Description                |
-| :-:     | :--                        |
+| --:     | :--                        |
 | `grm`   | make-all-cursors           |
 | `gru`   | undo-all-cursors           |
 | `grs`   | pause-cursors              |
@@ -105,7 +105,7 @@ New issues and pull requests to improve for general community highly encouraged.
 #### Changing workspace
 
 | Binding               | Description                        |
-| :-:                   | :--                                |
+| --:                   | :--                                |
 | `gT`                  | previous workspace                 |
 | `SPC l w n`           | create or switch to workspace n    |
 | `SPC l w TAB`         | last active workspace              |
@@ -117,18 +117,18 @@ New issues and pull requests to improve for general community highly encouraged.
 
 ## Find/Replace
 
-| Binding               | Description                        |
-| :-:                   | :--                                |
-| `Alt %`| query-replace; active region, or cursor point to end	interactive find/replace|
-| `y`    | do the replacement.|
-| `n`    | skip|
-| `!`    | do this and all remaining replacements without asking.|
-| `Ctrl+g` | cancel. |
+| Binding  | Description                                                                      |
+| :--      | :--                                                                              |
+| `Alt %`  | query-replace; active region, or cursor point to end	interactive find/replace |
+| `y`      | do the replacement.                                                              |
+| `n`      | skip                                                                             |
+| `!`      | do this and all remaining replacements without asking.                           |
+| `Ctrl+g` | cancel.                                                                          |
   
 ## Git
 
-| Binding               | Description                        |
-| :-:                   | :--                                |
+| Binding     | Description                                         |
+| --:         | :--                                                 |
 | `SPC g b`   | open a magit blame                                  |
 | `SPC g B`   | quit magit blame                                    |
 | `SPC g c`   | commit changes                                      |
@@ -169,33 +169,33 @@ Magit can only work from a Git repository
 - `SPC g s` open magit for a git repo
 
 #### Common commands
-| Binding               | Description                        |
-| :-:                   | :--                                |
-|`$`	|open command output buffer|
-|`c c`	|open a commit message buffer|
-|`b b`	|checkout a branch|
-|`b c`	|create a branch|
-|`f f`	|fetch changes|
-|`F u`	|pull tracked branch|
-| `-r` |toggle rebase on pull|
-|`gr`	|refresh|
-|`C-j`	|goto next magit section|
-|`C-k`	|goto previous magit section|
-|`l l`	|open log buffer|
-|`o`	|revert item at point|
-|`P u`	|push to tracked branch|
-|`P m`	|push to matching branch (e.g., upstream/develop to origin/develop)|
-|`q`	|quit|
-|`s`	|on a file or hunk in a diff: stage the file or hunk|
-|`S`	|stage all|
-|`x`	|discard changes|
-|`+`	|on a hunk: increase hunk size|
-|`-`	|on a hunk: decrease hunk size|
-|`TAB`	|on a file: expand/collapse diff|
-|`u`	|on a staged file: unstage|
-|`U`	|unstage all staged files|
-|`v or V`	|select multiple lines|
-|`z z`	|stash changes|
+| Binding  | Description                                                        |
+| :--      | :--                                                                |
+| `$`      | open command output buffer                                         |
+| `c c`    | open a commit message buffer                                       |
+| `b b`    | checkout a branch                                                  |
+| `b c`    | create a branch                                                    |
+| `f f`    | fetch changes                                                      |
+| `F u`    | pull tracked branch                                                |
+| `-r`     | toggle rebase on pull                                              |
+| `gr`     | refresh                                                            |
+| `C-j`    | goto next magit section                                            |
+| `C-k`    | goto previous magit section                                        |
+| `l l`    | open log buffer                                                    |
+| `o`      | revert item at point                                               |
+| `P u`    | push to tracked branch                                             |
+| `P m`    | push to matching branch (e.g., upstream/develop to origin/develop) |
+| `q`      | quit                                                               |
+| `s`      | on a file or hunk in a diff: stage the file or hunk                |
+| `S`      | stage all                                                          |
+| `x`      | discard changes                                                    |
+| `+`      | on a hunk: increase hunk size                                      |
+| `-`      | on a hunk: decrease hunk size                                      |
+| `TAB`    | on a file: expand/collapse diff                                    |
+| `u`      | on a staged file: unstage                                          |
+| `U`      | unstage all staged files                                           |
+| `v or V` | select multiple lines                                              |
+| `z z`    | stash changes                                                      |
 
 #### NOTE Staging lines
 
@@ -208,21 +208,21 @@ Discard the commit with `<leader>k`, or `C-c C-k`.
 
 ### 3.3 Interactive rebase buffer
 
-| Binding               | Description                        |
-| :-:                   | :--                                |
-| `c` or `p`	|pick|
-| `e`	|edit|
-| `f`	|fixup|
-| `j`	|go down|
-| `gj`	|move line down|
-| `k`	|go up|
-| `gk`	|move line up|
-| `d` or `x`	kill line|
-| `r`	|reword|
-| `s`	|squash|
-| `u`	|undo|
-| `y`	|insert|
-| `!`	|execute|
+| Binding                 | Description    |
+| :--                     | :--            |
+| `c` or `p`              | pick           |
+| `e`                     | edit           |
+| `f`                     | fixup          |
+| `j`                     | go down        |
+| `gj`                    | move line down |
+| `k`                     | go up          |
+| `gk`                    | move line up   |
+| `d` or `x`	kill line |                |
+| `r`                     | reword         |
+| `s`                     | squash         |
+| `u`                     | undo           |
+| `y`                     | insert         |
+| `!`                     | execute        |
         
 ### 3.4 Quick guide for recurring use cases in Magit
 
@@ -336,5 +336,4 @@ git-timemachine allows to quickly browse the commits of the current buffer.
 | `cit`   | inside html tag        |
 | `ci'`   | inside single quotes   |
 | `ci{`   | inside curly brackets. |
-|         |                        |
 
