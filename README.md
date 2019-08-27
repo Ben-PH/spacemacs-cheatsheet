@@ -17,15 +17,19 @@ New issues and pull requests to improve for general community highly encouraged.
 
 #### buffer/file/project juggling
 
-- `SPC b b` switch buffers
-- `SPC f f` find a file
-- `SPC f s` save a file (:w also works)
-- `SPC b d` kill current buffer
-- `SPC p p` open project
-- `SPC p h` find a file in current project
-- `SPC b M` move buffer to another window
-- `SPC v`   enter expand-region mode
-- `SPC b b` Helm mini; lists buffers & recent files
+
+| Binding   | Description                             |
+| :-:       | :--                                     |
+| `SPC b b` | switch buffers                          |
+| `SPC f f` | find a file                             |
+| `SPC f s` | save a file (:w also works)             |
+| `SPC b d` | kill current buffer                     |
+| `SPC p p` | open project                            |
+| `SPC p h` | find a file in current project          |
+| `SPC b M` | move buffer to another window           |
+| `SPC v`   | enter expand-region mode                |
+| `SPC b b` | Helm mini; lists buffers & recent files |
+
   - `CTRL SPC` Mark Items
   - `CTRL z` Actions
 - `SPC b B` ibuffer
