@@ -109,7 +109,7 @@ in the `develop` branch, optionally enabled in the main.
 Multiple cursors can be used to simultaneously modify occurrences of a word,
 expression, symbol, etc. To enable it globally add `(global-evil-mc-mode 1)` to your `.spacemacs` file.
 
-### General Principles
+### 2.2 General Principles
 
 1. Descriptions here are provided to supplement the [`evil-mc`
    documentation](https://github.com/gabesoft/evil-mc) which makes 
@@ -127,7 +127,7 @@ navigate among them.
 5. Fake cursors are created in two ways: a) by matching text, or b) by manually
    selecting where the cursor should be.
 
-### Simple case 1 - matching
+### 2.3 Simple Case 1 - Matching
 
 Using text matching we can create cursors on multiple lines. Let's say we have
 this picnic list:
@@ -151,7 +151,7 @@ Rob can't make it now we have to change his assignments to someone else.
 6. Type `ESC` to exit insert mode.
 7. To clear your cursors, type `grq` (`evil-undo-all-cursors`).
 
-### Simple case 2 - columnar
+### 2.4 Simple Case 2 - Columnar
 
 Another common case for changing multiple lines is that you want to change a
 column of text but there are no matching symbols.  In the example below, let's
@@ -163,7 +163,7 @@ say you want to change the `)` numbering to simply a `.`.
 3) Sample line C
 ```
 
-If you put your cursor on `)` and use the `C-N` you get the message `Search
+If you put your cursor on `)` and use the `C-n` you get the message `Search
 failed` because `evil` doesn't recognize the matching parenthesis. What we can
 do in this case is use the `evil-mc-make-cursor-and-goto-next-line` function.
 Rather than looking for match `evil` will simply move directly down one line.
@@ -175,7 +175,7 @@ Rather than looking for match `evil` will simply move directly down one line.
 4. As before, you can make your edits here using the normal commands.
 5. Type `ESC` to exit insert mode and type `grq` to clear the cursors.
 
-### Simple case 3 - movement args
+### 2.5 Simple Case 3 - Movement Args
 
 When running the cursor commands you can make use of normal `vim/spacemacs`
 movement arguments.
@@ -190,7 +190,7 @@ movement arguments.
 2. Type `2grj`.
 3. Edit as usual, `ESC` to exit insert mode, etc.
 
-### Simple case 3 - manually setting cursors 
+### 2.6 Simple Case 3 - Manually Setting Cursors 
 
 In the last example let's say we have some word or symbol that isn't matching
 really well or we're only dealing with a few lines.  In that case you might want
