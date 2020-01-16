@@ -81,6 +81,10 @@ New issues and pull requests to improve for general community highly encouraged.
 
 ## evil-mc
 
+[`evil-mc`](https://github.com/gabesoft/evil-mc) is a multi-cursor
+implementation available in `spacemacs` by default 
+in the `develop` branch, optionally enabled in the main. 
+
 | Binding | Description                |
 | --:     | :--                        |
 | `grm`   | make-all-cursors           |
@@ -99,6 +103,119 @@ New issues and pull requests to improve for general community highly encouraged.
 | `C-t`   | skip-and-goto-next-match   |
 | `C-p`   | make-and-goto-prev-match   |
 | `grp`   | skip-and-goto-prev-match   |
+
+### 2.1 Quick Guide for Using Multiple Cursors
+
+Multiple cursors can be used to simultaneously modify occurrences of a word,
+expression, symbol, etc. To enable it globally add `(global-evil-mc-mode 1)` to your `.spacemacs` file.
+
+### General Principles
+
+1. Descriptions here are provided to supplement the [`evil-mc`
+   documentation](https://github.com/gabesoft/evil-mc) which makes 
+   sense if you have a foundation but may be somewhat terse for the novice.
+   
+2. You use `evil-mc` commands to make or manipulate multiple "fake" cursors. You
+are then able to make modifications to text at all cursors at once in multiple
+locations of the buffer.
+
+3. Once created, fake cursors persist until you clear them (`grq`).
+
+4. There are two sets of commands, those that create/remove cursors and those that
+navigate among them.
+
+5. Fake cursors are created in two ways: a) by matching text, or b) by manually
+   selecting where the cursor should be.
+
+### Simple case 1 - matching
+
+Using text matching we can create cursors on multiple lines. Let's say we have
+this picnic list:
+
+```
+Ron: Ice and soda
+Sally: Volleyball
+Ron: Vollball nets
+Ron: Sand
+Ann: Adult beverages
+Ron: Sunblock
+```
+
+Rob can't make it now we have to change his assignments to someone else.
+
+1. Put your cursor on the first `Rob`.
+2. In command mode type `C-n` (`evil-mc-make-cursor-and-goto-next-match`).
+3. You should get another cursor on the _next_ match.
+4. Again, type `C-n` which should give you another cursor on the third match.
+5. At this point you can move and edit as appropriate (e.g., `b cw Rick`).
+6. Type `ESC` to exit insert mode.
+7. To clear your cursors, type `grq` (`evil-undo-all-cursors`).
+
+### Simple case 2 - columnar
+
+Another common case for changing multiple lines is that you want to change a
+column of text but there are no matching symbols.  In the example below, let's
+say you want to change the `)` numbering to simply a `.`.  
+
+```
+1) Sample line A
+2) Sample line B
+3) Sample line C
+```
+
+If you put your cursor on `)` and use the `C-N` you get the message `Search
+failed` because `evil` doesn't recognize the matching parenthesis. What we can
+do in this case is use the `evil-mc-make-cursor-and-goto-next-line` function.
+Rather than looking for match `evil` will simply move directly down one line.
+
+1. Put your cursor on the first `)`.
+2. In command mode type `grj` (`evil-mc-make-cursor-and-goto-next-line`).
+3. You will get a new fake cursor directly below where you started. Type `grj`
+   again and you will have your third cursor.
+4. As before, you can make your edits here using the normal commands.
+5. Type `ESC` to exit insert mode and type `grq` to clear the cursors.
+
+### Simple case 3 - movement args
+
+When running the cursor commands you can make use of normal `vim/spacemacs`
+movement arguments.
+
+```
+1) Sample line A
+2) Sample line B
+3) Sample line C
+```
+
+1. As before, in command mode put your cursor on the first `)`.
+2. Type `2grj`.
+3. Edit as usual, `ESC` to exit insert mode, etc.
+
+### Simple case 3 - manually setting cursors 
+
+In the last example let's say we have some word or symbol that isn't matching
+really well or we're only dealing with a few lines.  In that case you might want
+to manually place your fake cursors.  Let's say we want to instances below from
+`appl` to `run`.
+
+```groovy
+def appl_start = "apple"
+println "Application end: {appl_end}"
+def (other, appl_and_exit) = [true,false]
+
+```
+
+1. Move your cursor to the `a` in `appl` in the first line.
+2. Place a cursor using `grh` (`evil-mc-make-cursor-here`).
+3. You have your first fake cursor but now it will want to chase the real cursor
+   around while you place your other cursors so you need to pause it. Type `grs`
+   (`evil-mc-pause-cursors`).
+4. Now move to the `a` in `appl_end` and do another `grh`.
+5. Move to the `a` in `appl_and_exit` and place your final fake cursor with `grh`.
+6. Now resume cursors with `grr` (`evil-mc-resume-cursors`). 
+7. Edit as usual, `ESC` to exit insert mode, etc. 
+
+Once you get the idea, refer to the [`evil-mc`
+documentation](https://github.com/gabesoft/evil-mc) for more details.
 
 ## Eyebrowse
 
