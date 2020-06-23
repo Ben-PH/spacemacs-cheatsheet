@@ -14,7 +14,7 @@ New issues and pull requests to improve for general community highly encouraged.
 | `SPC w -` | split window horizontally |
 | `SPC 1`   | switch to window 1        |
 | `SPC 2`   | switch to window 2        |
-| `SPC w c` | delete current window     |
+| `SPC w d` | delete current window     |
 | `SPC TAB` | switch to previous buffer |
 
 #### buffer/file/project juggling
