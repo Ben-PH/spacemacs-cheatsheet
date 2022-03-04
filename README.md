@@ -14,7 +14,7 @@ New issues and pull requests to improve for general community highly encouraged.
 | `SPC w -` | split window horizontally |
 | `SPC 1`   | switch to window 1        |
 | `SPC 2`   | switch to window 2        |
-| `SPC w c` | delete current window     |
+| `SPC w d` | delete current window     |
 | `SPC TAB` | switch to previous buffer |
 
 #### buffer/file/project juggling
@@ -27,8 +27,9 @@ New issues and pull requests to improve for general community highly encouraged.
 | `SPC f s`   | save a file (:w also works)             |
 | `SPC b d`   | kill current buffer                     |
 | `SPC p p`   | open project                            |
-| `SPC p h`   | find a file in current project          |
-| `SPC b M`   | move buffer to another window           |
+| `SPC p f`   | find a file in current project          |
+| `SPC p h`   | switch buffers within current project   |
+| `SPC b 0-9  | move buffer to numbered window          |
 | `SPC v`     | enter expand-region mode                |
 | `SPC b b`   | Helm mini; lists buffers & recent files |
 |             | - `CTRL SPC` Mark Items                 |
@@ -39,22 +40,17 @@ New issues and pull requests to improve for general community highly encouraged.
 |             | - `CTRL l` open a folder                |
 |             | - `CTRL j` up                           |
 |             | - `CTRL k` down                         |
-| `SPC p f`   | opens root of project                   |
-| `SPC p p`   | opens projects                          |
+| `SPC p p`   | switch projects                         |
 | `SPC /`     | searches through project                |
-| `SPC s s`   | search in a file                        |
-| `SPC s l`   | find all function definitons in a file  |
-| `SPC s e`   | multiple cursors                        |
-|             | - `n` next cursor                       |
-|             | - `N` previous cursor                   |
+|  /          | search in a file                        |
+| `SPC s s`   | interactive search in a file            |
 | `SPC h d`   | help describe                           |
 | `SPC h d f` | help describe functions                 |
 | `SPC h d v` | help describe variables                 |
 | `SPC f e h` | help                                    |
 | `ALT /`     | snippet completion                      |
-| `SPC t s`   | syntax checking                         |
+| `SPC t s`   | toggle syntax checking                  |
 | `SPC e`     | syntax checking options                 |
-| `SPC a r`   | ranger                                  |
 | `SPC a d`   | dired                                   |
 
 #### region/highlighting
@@ -236,7 +232,7 @@ documentation](https://github.com/gabesoft/evil-mc) for more details.
 
 | Binding  | Description                                                                      |
 | :--      | :--                                                                              |
-| `Alt %`  | query-replace; active region, or cursor point to end	interactive find/replace |
+| `Alt %`  | interactive find/replace within selected region, or from cursor point to end     |
 | `y`      | do the replacement.                                                              |
 | `n`      | skip                                                                             |
 | `!`      | do this and all remaining replacements without asking.                           |
@@ -453,4 +449,5 @@ git-timemachine allows to quickly browse the commits of the current buffer.
 | `cit`   | inside html tag        |
 | `ci'`   | inside single quotes   |
 | `ci{`   | inside curly brackets. |
+| `ciw`   | inside word            |
 
